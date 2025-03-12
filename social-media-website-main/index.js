@@ -1,13 +1,9 @@
-// Sidebar
-const menuItems = document.querySelectorAll('.menu-item');
 
-// Messages 
+const menuItems = document.querySelectorAll('.menu-item');
 const messageNotification = document.querySelector('#messages-notifications');
 const messages = document.querySelector('.messages');
 const message = messages.querySelectorAll('.message');
 const messageSearch = document.querySelector('#message-search');
-
-//Theme
 const theme = document.querySelector('#theme');
 const themeModal = document.querySelector('.customize-theme');
 const fontSize = document.querySelectorAll('.choose-size span');
@@ -16,11 +12,6 @@ const colorPalette = document.querySelectorAll('.choose-color span');
 const Bg1 = document.querySelector('.bg-1');
 const Bg2 = document.querySelector('.bg-2');
 const Bg3 = document.querySelector('.bg-3');
-
-
-// ============== SIDEBAR ============== 
-
-// Remove active class from all menu items
 const changeActiveItem = () => {
     menuItems.forEach(item => {
         item.classList.remove('active');
@@ -42,10 +33,6 @@ menuItems.forEach(item => {
         }
     })
 })
-
-// ============== MESSAGES ============== 
-
-//Searches messages
 const searchMessage = () => {
     const val = messageSearch.value.toLowerCase();
     message.forEach(user => {
@@ -69,15 +56,10 @@ messageNotification.addEventListener('click', () => {
         messages.style.boxShadow = 'none';
     }, 2000);
 })
-
-// ============== THEME / DISPLAY CUSTOMIZATION ============== 
-
-// Opens Modal
 const openThemeModal = () => {
     themeModal.style.display = 'grid';
 }
 
-// Closes Modal
 const closeThemeModal = (e) => {
     if(e.target.classList.contains('customize-theme')) {
         themeModal.style.display = 'none';
@@ -86,11 +68,6 @@ const closeThemeModal = (e) => {
 
 themeModal.addEventListener('click', closeThemeModal);
 theme.addEventListener('click', openThemeModal);
-
-
-// ============== FONT SIZE ============== 
-
-// remove active class from spans or font size selectors
 const removeSizeSelectors = () => {
     fontSize.forEach(size => {
         size.classList.remove('active');
@@ -129,15 +106,11 @@ fontSize.forEach(size => {
         document.querySelector('html').style.fontSize = fontSize;
    })
 })
-
-// Remove active class from colors
 const changeActiveColorClass = () => {
     colorPalette.forEach(colorPicker => {
         colorPicker.classList.remove('active');
     })
 }
-
-// Change color primary
 colorPalette.forEach(color => {
     color.addEventListener('click', () => {
         let primary;
@@ -159,13 +132,9 @@ colorPalette.forEach(color => {
         root.style.setProperty('--primary-color-hue', primaryHue);
     })
 })
-
-//Theme Background Values
 let lightColorLightness;
 let whiteColorLightness;
 let darkColorLightness;
-
-// Changes background color
 const changeBG = () => {
     root.style.setProperty('--light-color-lightness', lightColorLightness);
     root.style.setProperty('--white-color-lightness', whiteColorLightness);
@@ -173,12 +142,9 @@ const changeBG = () => {
 }
 
 Bg1.addEventListener('click', () => {
-    // add active class
     Bg1.classList.add('active');
-    // remove active class from the others
     Bg2.classList.remove('active');
     Bg3.classList.remove('active');
-    //remove customized changes from local storage
     window.location.reload();
 });
 
@@ -186,10 +152,7 @@ Bg2.addEventListener('click', () => {
     darkColorLightness = '95%';
     whiteColorLightness = '20%';
     lightColorLightness = '15%';
-
-    // add active class
     Bg2.classList.add('active');
-    // remove active class from the others
     Bg1.classList.remove('active');
     Bg3.classList.remove('active');
     changeBG();
@@ -199,10 +162,7 @@ Bg3.addEventListener('click', () => {
     darkColorLightness = '95%';
     whiteColorLightness = '10%';
     lightColorLightness = '0%';
-
-    // add active class
     Bg3.classList.add('active');
-    // remove active class from the others
     Bg1.classList.remove('active');
     Bg2.classList.remove('active');
     changeBG();
