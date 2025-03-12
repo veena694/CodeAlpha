@@ -44,8 +44,6 @@ body {
     background: var(--color-light);
     overflow-x: hidden;
 }
-
-/* =============== General Style ============== */
 .container {
     width: 80%;
     margin: 0 auto;
@@ -89,8 +87,6 @@ img {
 .text-muted {
     color: var(--color-grey);
 }
-
-/* =============== Navbar ============== */
 nav {
     width: 100%;
     background: var(--color-white);
@@ -130,8 +126,6 @@ nav .create {
     align-items: center;
     gap: 2rem;
 }
-
-/* =============== Main ============== */
 main {
     position: relative;
     top: 5.4rem;
@@ -161,7 +155,6 @@ main .container .left .profile {
     width: 100%;
 }
 
-/* =============== Sidebar ============== */
 .left .sidebar {
     margin-top: 1rem;
     background: var(--color-white);
@@ -240,8 +233,6 @@ main .container .left .profile {
     padding: 1rem 0;
     margin-bottom: 0.7rem;
 }
-
-/* =============== Notification Popup ============== */
 .left .notifications-popup {
     position: absolute;
     top: 0;
@@ -276,9 +267,6 @@ main .container .left .profile {
 .left .notifications-popup small {
     display: block;
 }
-
-/* =============== Middle ============== */
-/* =============== Stories ============== */
 .middle .stories {
     display: flex;
     justify-content: space-between;
@@ -350,8 +338,6 @@ main .container .left .profile {
     align-self: start;
     border: 3px solid var(--color-light);
 }
-
-/* =============== Create Post ============== */
 .middle .create-post {
     width: 100%;
     display: flex;
@@ -371,8 +357,6 @@ main .container .left .profile {
     color: var(--color-dark);
     margin-right: 1rem;
 }
-
-/* =============== Feeds ============== */
 .middle .feeds .feed {
     background: var(--color-white);
     border-radius: var(--card-border-radius);
@@ -427,8 +411,6 @@ main .container .left .profile {
 .middle .liked-by p {
     margin-left: 0.5rem;
 }
-
-/* =============== Right ============== */
 main .container .right {
     height: max-content;
     position: sticky;
@@ -436,7 +418,6 @@ main .container .right {
     bottom: 0;
 }
 
-/* =============== Messages ============== */
 .right .messages {
     background: var(--color-white);
     border-radius: var(--card-border-radius);
@@ -543,8 +524,6 @@ main .container .right {
     display: flex;
     gap: 1rem;
 }
-
-/* =============== Theme Customization ============== */
 .customize-theme {
     background: rgba(0, 0, 0, 0.5);
     width: 100vw;
@@ -566,8 +545,6 @@ main .container .right {
     width:50%;
     box-shadow: 0 0 1rem var(--color-primary);
 }
-
-/* =============== Font Size ============== */
 .customize-theme .font-size {
     margin-top: 5rem;
 }
@@ -602,8 +579,6 @@ main .container .right {
 .customize-theme .choose-size span.active {
     background: var(--color-primary);
 }
-
-/* =============== Color ============== */
 .customize-theme .color {
     margin-top: 2rem;
 }
@@ -646,8 +621,6 @@ main .container .right {
 .customize-theme .choose-color span.active {
     border: 5px solid var(--color-secondary);
 }
-
-/* =============== Background ============== */
 .customize-theme .background {
     margin-top: 2rem;
 }
@@ -697,9 +670,6 @@ main .container .right {
     margin-right: 1rem;
 }
 
-/* ================= 
-MEDIA QUERIES FOR SMALL LAPTOP AND BIG TABLETS 
-==================== */
 
 @media screen and (max-width: 1200px) {
     .container {
@@ -733,9 +703,6 @@ MEDIA QUERIES FOR SMALL LAPTOP AND BIG TABLETS
     }
 }
 
-/* ================= 
-MEDIA QUERIES FOR SMALL TABLETS AND MOBILE PHONES
-==================== */
 
 @media screen and (max-width: 992px) {
     nav .search-bar {
